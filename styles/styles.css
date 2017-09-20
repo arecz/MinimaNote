@@ -1,0 +1,68 @@
+html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+
+body {
+    background: url(../images/bench-accounting.jpg) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    margin-top: 20vh;
+    font-family: 'Lato';
+    color: #1F1F1F;
+}
+
+@media (max-width: 600px) {
+    body {
+    background: url(../images/croppedbg.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    }
+   
+    h1 {
+        font-size: 2.8rem;
+    }
+    
+    h3 {
+        font-size: 1.3rem;
+    }
+    
+    button {
+        background-color: #28b74b;
+        border: 1px solid #3bd065;
+        border-radius: 8%;
+        padding: 12px 17px;
+        outline: none;
+        font-size: 0,8rem;
+        color: white;   
+    }
+
+}
+
+
+@media (min-width: 600px){
+    h1 {
+        font-size: 3.5rem;
+        margin: 0;
+    }
+
+    h3 {
+        font-size: 1.7rem;
+    }
+
+    button {
+        background-color: #28b74b;
+        border: 1px solid #3bd065;
+        border-radius: 8%;
+        padding: 15px 20px 15px 20px;
+        outline: none;
+        font-size: 1.1rem;
+        color: white;
+    }
+
+    button:hover {
+        background-color: #0b942d;
+    }
+}
