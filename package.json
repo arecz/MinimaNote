@@ -2,7 +2,7 @@
   "name": "minimanote",
   "version": "1.0.0",
   "description": "Minimal Note",
-  "main": "app.js",
+  "main": "index.js",
   "dependencies": {
     "autoprefixer": "^7.1.4",
     "browser-sync": "^2.18.13",
