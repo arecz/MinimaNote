@@ -12,10 +12,10 @@ app.get("/", function(req, res){
 
 
 
-/*app.listen(process.env.PORT, process.env.IP, function(){
-    console.log("Listening to: " + process.env.IP + process.env.PORT );
-})*/
+app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("Heroku");
+})
 
-app.listen(3001, function(){
+/*app.listen(3001, function(){
   console.log("Express: Server Started!");
-});
+});*/
