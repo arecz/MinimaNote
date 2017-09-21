@@ -10,7 +10,12 @@ app.get("/", function(req, res){
   res.render("landing")
 }); 
 
- 
+
+
+/*app.listen(process.env.PORT, process.env.IP, function(){
+    console.log("Listening to: " + process.env.IP + process.env.PORT );
+})*/
+
 app.listen(3001, function(){
   console.log("Express: Server Started!");
 });
