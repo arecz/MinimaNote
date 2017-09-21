@@ -36,7 +36,7 @@ body {
 
 @media (max-width: 500px){  
   .container {
-    margin: 15vh auto 0 auto;
+    margin: 10vh auto 0 auto;
   }
   
   h1 {
