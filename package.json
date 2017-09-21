@@ -12,13 +12,17 @@
   },
   "devDependencies": {
     "autoprefixer": "^7.1.4",
+    "browser-sync": "^2.18.13",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
+    "gulp-livereload": "^3.8.1",
+    "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1",
     "gulp-watch": "^4.3.11",
     "node-normalize-scss": "^3.0.0",
-    "nodemon": "^1.12.1"
+    "nodemon": "^1.12.1",
+    "sudo": "^1.0.3"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
