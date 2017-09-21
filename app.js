@@ -10,12 +10,16 @@ app.get("/", function(req, res){
   res.render("landing")
 }); 
 
+app.get("/minimanote", function(req, res){
+  res.render("index") 
+});
 
 
-app.listen(process.env.PORT, process.env.IP, function(){
+
+/*app.listen(process.env.PORT, process.env.IP, function(){
     console.log("Heroku");
-})
+})*/
 
-/*app.listen(3001, function(){
+app.listen(3003, function(){
   console.log("Express: Server Started!");
-});*/
+});
