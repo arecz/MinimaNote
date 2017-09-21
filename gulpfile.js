@@ -5,7 +5,7 @@ var gulp         = require("gulp"),
     sourcemaps   = require("gulp-sourcemaps");
 
 
-var input = "./public/sass/*.sass";
+var input = "./public/scss/*.scss";
 var output = "./public/css"
 
 var sassOptions = {
@@ -26,7 +26,7 @@ gulp.task("sass", function (){
 });
 
 gulp.task("watch", function(){
-   watch ("./public/sass/**/*sass", function (){
+   watch ("./public/scss/**/*scss", function (){
       gulp.start("sass")
    });
 });
