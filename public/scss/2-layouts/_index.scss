@@ -4,34 +4,40 @@
   width: 100%;
   background-color: $green;
   z-index: 10;
+  padding: .5rem 0;
   
   
   &-brand {
     color: $royalblue;
+    float: left;
+    margin-left: 1rem;
     &--text {
       margin: 0;
-      padding: .5rem 0 .5rem .5rem;
       font-size: 2rem;
+      
     }
   }
   
   &-content {
+    height: 100%;
     &-mobile {
       color: $royalblue;
       float: right;
       font-size: 2.4rem;
-      margin-top: .4rem;
+/*      margin-top: .4rem;*/
       margin-right: .8rem;
+      margin-top: -.1rem;
     }
     
     &-desktop {
+      position: relative;
       display: none;
     }
     &-mobile--list {
       display: none;
     }
   }
-}
+} 
 
 .header {
   &-wrapper {
@@ -129,20 +135,29 @@
 @media #{$breakpoint-tablet}{
   .navbar {
     &-content {
+      display: block;
+      float: right;
       &-mobile {
         display: none;
       } 
       &-desktop {
         display: block;
-        margin: 0;
+        margin-right: .5rem;
         float: right;
-        & li {
-          float:right;
-          padding-right: 1.8rem;
+        
+        &-button {
+          float: right;
+          padding: .5rem .8rem;
+          text-decoration: none;
+          color: $royalblue;
+          &:hover {
+            background-color: $lightgreen;
+          }
         }
       }
     }
   }
+  
     .header {
     &-wrapper {
       background: url(/images/croppedbg.jpg) no-repeat center center;
@@ -211,7 +226,7 @@
     &-footer {
       transform: translate(0, 60vh);
       background-color: $lightgreen;
-      padding: 4vh 2vh 7vh 2vh;
+      padding: 4vh 2vh 4vh 2vh;
       color: $royalblue;
       text-align: center;
       box-sizing: border-box;

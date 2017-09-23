@@ -278,27 +278,35 @@ table {
   width: 100%;
   background-color: #5CDB95;
   z-index: 10;
+  padding: .5rem 0;
 }
 
 .navbar-brand {
   color: #05386B;
+  float: left;
+  margin-left: 1rem;
 }
 
 .navbar-brand--text {
   margin: 0;
-  padding: .5rem 0 .5rem .5rem;
   font-size: 2rem;
+}
+
+.navbar-content {
+  height: 100%;
 }
 
 .navbar-content-mobile {
   color: #05386B;
   float: right;
   font-size: 2.4rem;
-  margin-top: .4rem;
+  /*      margin-top: .4rem;*/
   margin-right: .8rem;
+  margin-top: -.1rem;
 }
 
 .navbar-content-desktop {
+  position: relative;
   display: none;
 }
 
@@ -384,17 +392,26 @@ table {
 }
 
 @media only screen and (min-width: 700px) {
+  .navbar-content {
+    display: block;
+    float: right;
+  }
   .navbar-content-mobile {
     display: none;
   }
   .navbar-content-desktop {
     display: block;
-    margin: 0;
+    margin-right: .5rem;
     float: right;
   }
-  .navbar-content-desktop li {
+  .navbar-content-desktop-button {
     float: right;
-    padding-right: 1.8rem;
+    padding: .5rem .8rem;
+    text-decoration: none;
+    color: #05386B;
+  }
+  .navbar-content-desktop-button:hover {
+    background-color: #8EE4AF;
   }
   .header-wrapper {
     background: url(/images/croppedbg.jpg) no-repeat center center;
@@ -454,7 +471,7 @@ table {
     -webkit-transform: translate(0, 60vh);
             transform: translate(0, 60vh);
     background-color: #8EE4AF;
-    padding: 4vh 2vh 7vh 2vh;
+    padding: 4vh 2vh 4vh 2vh;
     color: #05386B;
     text-align: center;
     -webkit-box-sizing: border-box;
