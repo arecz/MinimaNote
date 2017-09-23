@@ -1,13 +1,12 @@
 
-
 .navbar {
   position: fixed;
   width: 100%;
-  background-color: $light;
+  background-color: $green;
   
   
   &-brand {
-    color: $darkgreen;
+    color: $royalblue;
     &--text {
       margin: 0;
       padding: .5rem 0 .5rem .5rem;
@@ -17,7 +16,7 @@
   
   &-content {
     &-mobile {
-      color: $darkgreen;
+      color: $royalblue;
       float: right;
       font-size: 2.4rem;
       margin-top: .4rem;
@@ -32,7 +31,53 @@
     }
   }
 
+.header {
+  &-wrapper {
+    background: url(/images/croppedbg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 100vh;
+    text-align: center;
+    
+  }
+  &-content {
+    max-width: 30vh;
+    transform: translate(0, 30vh);
+    display: inline-block;
+    &--title{
+      font-size: 1.8rem;
+      color: $royalblue;
+      font-weight: $bold;
+    }
+  }
+  &-footer {
+    transform: translate(0, 65vh);
+    background-color: $lightgreen;
+    padding: 5vh 2vh 7vh 2vh;
+    color: $royalblue;
+    text-align: center;
+
+    &--text {
+      font-weight: $bold;
+      font-size: 1.2rem;
+      max-width: 380px;
+      display: inline-block;
+    }
+    
+  }
+}
+
+.about {
+  height: 1000px;
+  &-wrapper{
+  
+  }
+  &-content{
+    
+  }
+}
+  
   @media #{$breakpoint-tablet}{
+    .navbar {
     &-content {
       &-mobile {
         display: none;
@@ -49,10 +94,5 @@
     }
   }
 }
-
-.header-picture {
-  display: flex;
-}
-
 
 

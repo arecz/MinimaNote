@@ -276,11 +276,11 @@ table {
 .navbar {
   position: fixed;
   width: 100%;
-  background-color: #EDF5E1;
+  background-color: #5CDB95;
 }
 
 .navbar-brand {
-  color: #379683;
+  color: #05386B;
 }
 
 .navbar-brand--text {
@@ -290,7 +290,7 @@ table {
 }
 
 .navbar-content-mobile {
-  color: #379683;
+  color: #05386B;
   float: right;
   font-size: 2.4rem;
   margin-top: .4rem;
@@ -320,8 +320,42 @@ table {
   }
 }
 
-.header-picture {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.header-wrapper {
+  background: url(/images/croppedbg.jpg) no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+}
+
+.header-content {
+  max-width: 30vh;
+  -webkit-transform: translate(0, 30vh);
+          transform: translate(0, 30vh);
+  display: inline-block;
+}
+
+.header-content--title {
+  font-size: 1.8rem;
+  color: #05386B;
+  font-weight: 700;
+}
+
+.header-footer {
+  -webkit-transform: translate(0, 65vh);
+          transform: translate(0, 65vh);
+  background-color: #8EE4AF;
+  padding: 5vh 2vh 7vh 2vh;
+  color: #05386B;
+  text-align: center;
+}
+
+.header-footer--text {
+  font-weight: 700;
+  font-size: 1.2rem;
+  max-width: 380px;
+  display: inline-block;
+}
+
+.about {
+  height: 1000px;
 }
