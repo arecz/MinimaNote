@@ -277,6 +277,7 @@ table {
   position: fixed;
   width: 100%;
   background-color: #5CDB95;
+  z-index: 10;
 }
 
 .navbar-brand {
@@ -305,32 +306,17 @@ table {
   display: none;
 }
 
-@media only screen and (min-width: 768px) {
-  .navbar-content-mobile {
-    display: none;
-  }
-  .navbar-content-desktop {
-    display: block;
-    margin: 0;
-    float: right;
-  }
-  .navbar-content-desktop li {
-    float: right;
-    padding-right: 1.8rem;
-  }
-}
-
 .header-wrapper {
   background: url(/images/croppedbg.jpg) no-repeat center center;
   background-size: cover;
-  height: 100vh;
+  height: 75vh;
   text-align: center;
 }
 
 .header-content {
   max-width: 30vh;
-  -webkit-transform: translate(0, 30vh);
-          transform: translate(0, 30vh);
+  -webkit-transform: translate(0, 20vh);
+          transform: translate(0, 20vh);
   display: inline-block;
 }
 
@@ -341,8 +327,8 @@ table {
 }
 
 .header-footer {
-  -webkit-transform: translate(0, 65vh);
-          transform: translate(0, 65vh);
+  -webkit-transform: translate(0, 40vh);
+          transform: translate(0, 40vh);
   background-color: #8EE4AF;
   padding: 5vh 2vh 7vh 2vh;
   color: #05386B;
@@ -358,4 +344,126 @@ table {
 
 .about {
   height: 1000px;
+}
+
+@media only screen and (min-width: 350px) {
+  .header-wrapper {
+    background: url(/images/croppedbg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 82vh;
+    text-align: center;
+  }
+  .header-content {
+    max-width: 30vh;
+    -webkit-transform: translate(0, 20vh);
+            transform: translate(0, 20vh);
+    display: inline-block;
+  }
+  .header-content--title {
+    font-size: 1.8rem;
+    color: #05386B;
+    font-weight: 700;
+  }
+  .header-footer {
+    -webkit-transform: translate(0, 55vh);
+            transform: translate(0, 55vh);
+    background-color: #8EE4AF;
+    padding: 5vh 2vh 7vh 2vh;
+    color: #05386B;
+    text-align: center;
+  }
+  .header-footer--text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    max-width: 380px;
+    display: inline-block;
+  }
+  .about {
+    height: 1000px;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  .navbar-content-mobile {
+    display: none;
+  }
+  .navbar-content-desktop {
+    display: block;
+    margin: 0;
+    float: right;
+  }
+  .navbar-content-desktop li {
+    float: right;
+    padding-right: 1.8rem;
+  }
+  .header-wrapper {
+    background: url(/images/croppedbg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+  }
+  .header-content {
+    max-width: 30vh;
+    -webkit-transform: translate(0, 20vh);
+            transform: translate(0, 20vh);
+    display: inline-block;
+  }
+  .header-content--title {
+    font-size: 1.8rem;
+    color: #05386B;
+    font-weight: 700;
+  }
+  .header-footer {
+    -webkit-transform: translate(0, 72vh);
+            transform: translate(0, 72vh);
+    background-color: #8EE4AF;
+    padding: 5vh 2vh 7vh 2vh;
+    color: #05386B;
+    text-align: center;
+  }
+  .header-footer--text {
+    font-weight: 700;
+    font-size: 1.2rem;
+    max-width: 380px;
+    display: inline-block;
+  }
+  .about {
+    height: 1000px;
+  }
+}
+
+@media only screen and (min-width: 1224px) {
+  .header-wrapper {
+    background: url(/images/croppedbg.jpg) no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    text-align: center;
+  }
+  .header-content {
+    max-width: 40vh;
+    -webkit-transform: translate(0, 20vh);
+            transform: translate(0, 20vh);
+    display: inline-block;
+  }
+  .header-content--title {
+    font-size: 2.8rem;
+    color: #05386B;
+    font-weight: 700;
+  }
+  .header-footer {
+    -webkit-transform: translate(0, 60vh);
+            transform: translate(0, 60vh);
+    background-color: #8EE4AF;
+    padding: 4vh 2vh 4vh 2vh;
+    color: #05386B;
+    text-align: center;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  .header-footer--text {
+    font-weight: 700;
+    font-size: 1.6rem;
+    max-width: 420px;
+    display: inline-block;
+  }
 }
