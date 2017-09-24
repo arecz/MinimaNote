@@ -1,3 +1,6 @@
+* {
+  box-sizing: border-box;
+}
 
 .navbar {
   position: fixed;
@@ -5,7 +8,6 @@
   background-color: $green;
   z-index: 10;
   padding: .5rem 0;
-  
   
   &-brand {
     color: $royalblue;
@@ -19,7 +21,6 @@
   }
   
   &-content {
-    height: 100%;
     &-mobile {
       color: $royalblue;
       float: right;
@@ -41,9 +42,11 @@
 
 .header {
   &-wrapper {
-    background: url(/images/croppedbg.jpg) no-repeat center center;
-    background-size: cover;
-    height: 75vh;
+    background-image: url("/images/tree_bark.png");
+
+    height: 100%;
+    min-width: 100%;
+    
     text-align: center;
     
   }
@@ -58,38 +61,78 @@
     }
   }
   &-footer {
-    transform: translate(0, 40vh);
+    position: absolute;
+    bottom: 0;
     background-color: $lightgreen;
-    padding: 5vh 2vh 7vh 2vh;
+    padding: 5vh 1vh;
     color: $royalblue;
     text-align: center;
+    border-bottom: $container-border;
+    width: 100%;
+    
 
     &--text {
       font-weight: $bold;
       font-size: 1.2rem;
-      max-width: 380px;
       display: inline-block;
+    }
+    
+    &--logo {
+      margin-top: 2rem;
     }
     
   }
 }
 
 .about {
-  height: 1000px;
+  background-color: $light;
+  border-bottom: $container-border;
+  color: $royalblue;
+  font-size: 1.1rem;
   &-wrapper{
-  
+    margin: 0 auto;
+    text-align: center;
   }
   &-content{
-    
+    padding: 2rem; 
+    &--text{
+      margin: 0 auto;
+      display:block;
+      max-width: 400px;
+      padding: .5rem;
+    }
   }
 }
+
+.functions {
+  position:relative;
+  text-align: center;
+  background-image: url("/images/tree_bark.png");
+  &-header{
+    padding: 4rem;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: $royalblue;
+    font-size: 1.8rem;
+    &--text {
+      margin: 0;
+    }
+  }
+  
+  &-content {
+    position: relative;
+    &-column {
+
+    }
+  }
+}
+
+
+
+
 
 @media #{$breakpoint-smartphone}{
     .header {
     &-wrapper {
-      background: url(/images/croppedbg.jpg) no-repeat center center;
-      background-size: cover;
-      height: 82vh;
       text-align: center;
 
     }
@@ -104,7 +147,6 @@
       }
     }
     &-footer {
-      transform: translate(0, 55vh);
       background-color: $lightgreen;
       padding: 5vh 2vh 7vh 2vh;
       color: $royalblue;
@@ -114,14 +156,15 @@
         font-weight: $bold;
         font-size: 1.2rem;
         max-width: 380px;
-        display: inline-block;
+        display: block;
+        margin: 0 auto;
       }
 
     }
   }
+}
 
-  .about {
-    height: 1000px;
+/*  .about {
     &-wrapper{
 
     }
@@ -129,7 +172,7 @@
 
     }
   }
-} 
+} */
  
 
 @media #{$breakpoint-tablet}{
@@ -154,15 +197,12 @@
             background-color: $lightgreen;
           }
         }
-      }
+      } 
     }
   }
   
-    .header {
+  .header {
     &-wrapper {
-      background: url(/images/croppedbg.jpg) no-repeat center center;
-      background-size: cover;
-      height: 90vh;
       text-align: center;
 
     }
@@ -177,7 +217,6 @@
       }
     }
     &-footer {
-      transform: translate(0, 72vh);
       background-color: $lightgreen;
       padding: 5vh 2vh 7vh 2vh;
       color: $royalblue;
@@ -187,14 +226,13 @@
         font-weight: $bold;
         font-size: 1.2rem;
         max-width: 380px;
-        display: inline-block;
+        display: block;
+        margin: 0 auto;
       }
-
     }
   }
 
   .about {
-    height: 1000px;
     &-wrapper{
 
     }
@@ -202,14 +240,24 @@
 
     }
   }
-}
+  
+  .functions {
+    position: absolute;
+    width: 100%;
+    &-content {
+      &-column {
+        display: inline-block;
+        float: left;
+        min-width: 50%; 
+      } 
+    }
+  }
+} 
+
 
 @media #{$breakpoint-desktop}{
   .header {
     &-wrapper {
-      background: url(/images/croppedbg.jpg) no-repeat center center;
-      background-size: cover;
-      height: 90vh;
       text-align: center;
 
     }
@@ -224,9 +272,8 @@
       }
     }
     &-footer {
-      transform: translate(0, 60vh);
       background-color: $lightgreen;
-      padding: 4vh 2vh 4vh 2vh;
+      padding: 5vh 2vh 5vh 2vh;
       color: $royalblue;
       text-align: center;
       box-sizing: border-box;
@@ -235,12 +282,54 @@
         font-weight: $bold;
         font-size: 1.6rem;
         max-width: 420px;
-        display: inline-block;
+        display: block;
+        margin: 0 auto;
+        
       }
-
+      &--logo {
+        display: inline-block;
+        margin-top: 2rem; 
+      }
     }
   }
-
+  
+  .functions {
+    &-content {
+      max-width: 100%;
+      position: relative;
+      &-column {
+        display: inline-block;
+        float: left;
+        position: relative;
+        min-width: 25%; 
+      }
+    }
+  } 
 }
+
+
+.fa-arrow-down:before {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 3px solid $royalblue;
+  border-radius: 100%;
+  background-color: $green; 
+}
+
+.fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
+  position: relative;
+  font-size: 10rem;
+  color: $royalblue;
+  display: block;
+  padding: 3rem 0;
+}
+
+hr {
+  margin: 0;
+}
+
+
+
+
 
 

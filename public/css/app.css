@@ -1,3 +1,16 @@
+/*  .functions {
+    &-content {
+      max-width: 100%; 
+      position: relative;
+      &-column {
+        display: block;
+        float: left;
+        position: relative;
+        min-width: 50%;
+      }
+    }
+  }
+} */
 article,
 aside,
 details,
@@ -273,6 +286,11 @@ table {
   border-spacing: 0;
 }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
 .navbar {
   position: fixed;
   width: 100%;
@@ -290,10 +308,6 @@ table {
 .navbar-brand--text {
   margin: 0;
   font-size: 2rem;
-}
-
-.navbar-content {
-  height: 100%;
 }
 
 .navbar-content-mobile {
@@ -315,9 +329,9 @@ table {
 }
 
 .header-wrapper {
-  background: url(/images/croppedbg.jpg) no-repeat center center;
-  background-size: cover;
-  height: 75vh;
+  background-image: url("/images/tree_bark.png");
+  height: 100%;
+  min-width: 100%;
   text-align: center;
 }
 
@@ -335,30 +349,72 @@ table {
 }
 
 .header-footer {
-  -webkit-transform: translate(0, 40vh);
-          transform: translate(0, 40vh);
+  position: absolute;
+  bottom: 0;
   background-color: #8EE4AF;
-  padding: 5vh 2vh 7vh 2vh;
+  padding: 5vh 1vh;
   color: #05386B;
   text-align: center;
+  border-bottom: 5px solid #05386B;
+  width: 100%;
 }
 
 .header-footer--text {
   font-weight: 700;
   font-size: 1.2rem;
-  max-width: 380px;
   display: inline-block;
 }
 
-.about {
-  height: 1000px;
+.header-footer--logo {
+  margin-top: 2rem;
 }
 
-@media only screen and (min-width: 350px) {
+.about {
+  background-color: #EDF5E1;
+  border-bottom: 5px solid #05386B;
+  color: #05386B;
+  font-size: 1.1rem;
+}
+
+.about-wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content {
+  padding: 2rem;
+}
+
+.about-content--text {
+  margin: 0 auto;
+  display: block;
+  max-width: 400px;
+  padding: .5rem;
+}
+
+.functions {
+  position: relative;
+  text-align: center;
+  background-image: url("/images/tree_bark.png");
+}
+
+.functions-header {
+  padding: 4rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  color: #05386B;
+  font-size: 1.8rem;
+}
+
+.functions-header--text {
+  margin: 0;
+}
+
+.functions-content {
+  position: relative;
+}
+
+@media all and (min-width: 350px) {
   .header-wrapper {
-    background: url(/images/croppedbg.jpg) no-repeat center center;
-    background-size: cover;
-    height: 82vh;
     text-align: center;
   }
   .header-content {
@@ -373,8 +429,6 @@ table {
     font-weight: 700;
   }
   .header-footer {
-    -webkit-transform: translate(0, 55vh);
-            transform: translate(0, 55vh);
     background-color: #8EE4AF;
     padding: 5vh 2vh 7vh 2vh;
     color: #05386B;
@@ -384,14 +438,21 @@ table {
     font-weight: 700;
     font-size: 1.2rem;
     max-width: 380px;
-    display: inline-block;
-  }
-  .about {
-    height: 1000px;
+    display: block;
+    margin: 0 auto;
   }
 }
 
-@media only screen and (min-width: 700px) {
+/*  .about {
+    &-wrapper{
+
+    }
+    &-content{
+
+    }
+  }
+} */
+@media all and (min-width: 700px) {
   .navbar-content {
     display: block;
     float: right;
@@ -414,9 +475,6 @@ table {
     background-color: #8EE4AF;
   }
   .header-wrapper {
-    background: url(/images/croppedbg.jpg) no-repeat center center;
-    background-size: cover;
-    height: 90vh;
     text-align: center;
   }
   .header-content {
@@ -431,8 +489,6 @@ table {
     font-weight: 700;
   }
   .header-footer {
-    -webkit-transform: translate(0, 72vh);
-            transform: translate(0, 72vh);
     background-color: #8EE4AF;
     padding: 5vh 2vh 7vh 2vh;
     color: #05386B;
@@ -442,18 +498,22 @@ table {
     font-weight: 700;
     font-size: 1.2rem;
     max-width: 380px;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
   }
-  .about {
-    height: 1000px;
+  .functions {
+    position: absolute;
+    width: 100%;
+  }
+  .functions-content-column {
+    display: inline-block;
+    float: left;
+    min-width: 50%;
   }
 }
 
-@media only screen and (min-width: 1224px) {
+@media all and (min-width: 1280px) {
   .header-wrapper {
-    background: url(/images/croppedbg.jpg) no-repeat center center;
-    background-size: cover;
-    height: 90vh;
     text-align: center;
   }
   .header-content {
@@ -468,10 +528,8 @@ table {
     font-weight: 700;
   }
   .header-footer {
-    -webkit-transform: translate(0, 60vh);
-            transform: translate(0, 60vh);
     background-color: #8EE4AF;
-    padding: 4vh 2vh 4vh 2vh;
+    padding: 5vh 2vh 5vh 2vh;
     color: #05386B;
     text-align: center;
     -webkit-box-sizing: border-box;
@@ -481,6 +539,41 @@ table {
     font-weight: 700;
     font-size: 1.6rem;
     max-width: 420px;
-    display: inline-block;
+    display: block;
+    margin: 0 auto;
   }
+  .header-footer--logo {
+    display: inline-block;
+    margin-top: 2rem;
+  }
+  .functions-content {
+    max-width: 100%;
+    position: relative;
+  }
+  .functions-content-column {
+    display: inline-block;
+    float: left;
+    position: relative;
+    min-width: 25%;
+  }
+}
+
+.fa-arrow-down:before {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 3px solid #05386B;
+  border-radius: 100%;
+  background-color: #5CDB95;
+}
+
+.fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
+  position: relative;
+  font-size: 10rem;
+  color: #05386B;
+  display: block;
+  padding: 3rem 0;
+}
+
+hr {
+  margin: 0;
 }

@@ -1,10 +1,13 @@
 
-$breakpoint-smartphone: "only screen and (min-width: 350px)";
-$breakpoint-tablet: "only screen and (min-width: 700px)";
-$breakpoint-desktop: "only screen and (min-width: 1224px)";
+$breakpoint-smartphone: "all and (min-width: 350px)";
+$breakpoint-tablet: "all and (min-width: 700px)";
+$breakpoint-tablet-landscape: "all and (min-width: 980px)";
+$breakpoint-desktop: "all and (min-width: 1280px)";
+
 
 $font-base-sans: 'Roboto';
 $font-base-serif: 'Slabo', "sans-serif";
+
 $royalblue: #05386B;
 $darkgreen: #379683;
 $green: #5CDB95;
@@ -13,3 +16,20 @@ $lightgreen-alpha:(rgba(142, 228, 175, 0.3));
 $light: #EDF5E1;
 
 $bold: 700;
+
+$container-border: 5px solid $royalblue;
+
+
+/*  .functions {
+    &-content {
+      max-width: 100%; 
+      position: relative;
+      &-column {
+        display: block;
+        float: left;
+        position: relative;
+        min-width: 50%;
+      }
+    }
+  }
+} */
