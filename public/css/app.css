@@ -294,13 +294,13 @@ table {
 .navbar {
   position: fixed;
   width: 100%;
-  background-color: #5CDB95;
+  background-color: #05386B;
   z-index: 10;
   padding: .5rem 0;
 }
 
 .navbar-brand {
-  color: #05386B;
+  color: #EFEFEF;
   float: left;
   margin-left: 1rem;
 }
@@ -311,7 +311,7 @@ table {
 }
 
 .navbar-content-mobile {
-  color: #05386B;
+  color: #EFEFEF;
   float: right;
   font-size: 2.4rem;
   /*      margin-top: .4rem;*/
@@ -351,7 +351,7 @@ table {
 .header-footer {
   position: absolute;
   bottom: 0;
-  background-color: #8EE4AF;
+  background-color: #B3E5FC;
   padding: 5vh 1vh;
   color: #05386B;
   text-align: center;
@@ -370,10 +370,12 @@ table {
 }
 
 .about {
-  background-color: #EDF5E1;
+  background: url("/images/notepad--large-min.jpg") no-repeat center center;
+  background-size: cover;
   border-bottom: 5px solid #05386B;
   color: #05386B;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding: 5rem 0 4rem 0;
 }
 
 .about-wrapper {
@@ -382,14 +384,19 @@ table {
 }
 
 .about-content {
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 2rem;
 }
 
 .about-content--text {
   margin: 0 auto;
+  max-width: 50vh;
   display: block;
-  max-width: 400px;
   padding: .5rem;
+}
+
+.about-content-footer {
+  margin-top: 6rem;
 }
 
 .functions {
@@ -398,19 +405,12 @@ table {
   background-image: url("/images/tree_bark.png");
 }
 
-.functions-header {
-  padding: 4rem;
-  background-color: rgba(0, 0, 0, 0.3);
-  color: #05386B;
-  font-size: 1.8rem;
-}
-
-.functions-header--text {
-  margin: 0;
-}
-
 .functions-content {
   position: relative;
+}
+
+.functions-content-column:hover {
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 @media all and (min-width: 350px) {
@@ -429,7 +429,7 @@ table {
     font-weight: 700;
   }
   .header-footer {
-    background-color: #8EE4AF;
+    background-color: #B3E5FC;
     padding: 5vh 2vh 7vh 2vh;
     color: #05386B;
     text-align: center;
@@ -441,17 +441,17 @@ table {
     display: block;
     margin: 0 auto;
   }
+  .about {
+    padding: 10rem 0 4rem 0;
+  }
+  .about-wrapper {
+    font-size: 1.2rem;
+  }
+  .about-content--text {
+    max-width: 60vh;
+  }
 }
 
-/*  .about {
-    &-wrapper{
-
-    }
-    &-content{
-
-    }
-  }
-} */
 @media all and (min-width: 700px) {
   .navbar-content {
     display: block;
@@ -469,10 +469,10 @@ table {
     float: right;
     padding: .5rem .8rem;
     text-decoration: none;
-    color: #05386B;
+    color: white;
   }
   .navbar-content-desktop-button:hover {
-    background-color: #8EE4AF;
+    background-color: #03A9F4;
   }
   .header-wrapper {
     text-align: center;
@@ -489,7 +489,7 @@ table {
     font-weight: 700;
   }
   .header-footer {
-    background-color: #8EE4AF;
+    background-color: #B3E5FC;
     padding: 5vh 2vh 7vh 2vh;
     color: #05386B;
     text-align: center;
@@ -500,6 +500,12 @@ table {
     max-width: 380px;
     display: block;
     margin: 0 auto;
+  }
+  .about-wrapper {
+    font-size: 1.4rem;
+  }
+  .about-content--text {
+    letter-spacing: .03rem;
   }
   .functions {
     position: absolute;
@@ -528,7 +534,7 @@ table {
     font-weight: 700;
   }
   .header-footer {
-    background-color: #8EE4AF;
+    background-color: #B3E5FC;
     padding: 5vh 2vh 5vh 2vh;
     color: #05386B;
     text-align: center;
@@ -555,6 +561,7 @@ table {
     float: left;
     position: relative;
     min-width: 25%;
+    padding: 3rem 0;
   }
 }
 
@@ -563,7 +570,6 @@ table {
   padding: 1rem;
   border: 3px solid #05386B;
   border-radius: 100%;
-  background-color: #5CDB95;
 }
 
 .fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {

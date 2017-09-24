@@ -5,12 +5,12 @@
 .navbar {
   position: fixed;
   width: 100%;
-  background-color: $green;
+  background-color: $royalblue;
   z-index: 10;
   padding: .5rem 0;
   
   &-brand {
-    color: $royalblue;
+    color: $white;
     float: left;
     margin-left: 1rem;
     &--text {
@@ -22,7 +22,7 @@
   
   &-content {
     &-mobile {
-      color: $royalblue;
+      color: $white;
       float: right;
       font-size: 2.4rem;
 /*      margin-top: .4rem;*/
@@ -63,7 +63,7 @@
   &-footer {
     position: absolute;
     bottom: 0;
-    background-color: $lightgreen;
+    background-color: $lightblue;
     padding: 5vh 1vh;
     color: $royalblue;
     text-align: center;
@@ -85,21 +85,27 @@
 }
 
 .about {
-  background-color: $light;
+  background: url("/images/notepad--large-min.jpg") no-repeat center center;
+  background-size: cover;
   border-bottom: $container-border;
   color: $royalblue;
-  font-size: 1.1rem;
+  font-size: 1rem;
+  padding: 5rem 0 4rem 0;
   &-wrapper{
     margin: 0 auto;
     text-align: center;
   }
   &-content{
+    background-color: rgba(255, 255, 255, 0.7);
     padding: 2rem; 
     &--text{
       margin: 0 auto;
+      max-width: 50vh;
       display:block;
-      max-width: 400px;
       padding: .5rem;
+    }
+    &-footer{
+      margin-top: 6rem;
     }
   }
 }
@@ -108,22 +114,15 @@
   position:relative;
   text-align: center;
   background-image: url("/images/tree_bark.png");
-  &-header{
-    padding: 4rem;
-    background-color: rgba(0, 0, 0, 0.3);
-    color: $royalblue;
-    font-size: 1.8rem;
-    &--text {
-      margin: 0;
-    }
-  }
   
   &-content {
     position: relative;
     &-column {
-
+      &:hover{
+        background-color: rgba(0, 0, 0, 0.4)
+      }
     }
-  }
+  } 
 }
 
 
@@ -147,7 +146,7 @@
       }
     }
     &-footer {
-      background-color: $lightgreen;
+      background-color: $lightblue;
       padding: 5vh 2vh 7vh 2vh;
       color: $royalblue;
       text-align: center;
@@ -162,17 +161,21 @@
 
     }
   }
-}
 
-/*  .about {
+
+  .about {
+    padding: 10rem 0 4rem 0;
     &-wrapper{
-
+      font-size: 1.2rem;
     }
     &-content{
-
+      &--text {
+        max-width: 60vh;
+      }
     }
   }
-} */
+}
+ 
  
 
 @media #{$breakpoint-tablet}{
@@ -192,9 +195,9 @@
           float: right;
           padding: .5rem .8rem;
           text-decoration: none;
-          color: $royalblue;
+          color: white;
           &:hover {
-            background-color: $lightgreen;
+            background-color: $blue;
           }
         }
       } 
@@ -217,7 +220,7 @@
       }
     }
     &-footer {
-      background-color: $lightgreen;
+      background-color: $lightblue;
       padding: 5vh 2vh 7vh 2vh;
       color: $royalblue;
       text-align: center;
@@ -234,10 +237,12 @@
 
   .about {
     &-wrapper{
-
+      font-size: 1.4rem;
     }
     &-content{
-
+      &--text{
+        letter-spacing: .03rem;
+      }
     }
   }
   
@@ -272,7 +277,7 @@
       }
     }
     &-footer {
-      background-color: $lightgreen;
+      background-color: $lightblue;
       padding: 5vh 2vh 5vh 2vh;
       color: $royalblue;
       text-align: center;
@@ -302,6 +307,7 @@
         float: left;
         position: relative;
         min-width: 25%; 
+        padding: 3rem 0;
       }
     }
   } 
@@ -313,7 +319,6 @@
   padding: 1rem;
   border: 3px solid $royalblue;
   border-radius: 100%;
-  background-color: $green; 
 }
 
 .fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
@@ -327,6 +332,7 @@
 hr {
   margin: 0;
 }
+
 
 
 
