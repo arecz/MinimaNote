@@ -562,14 +562,13 @@ table {
 
 .functions {
   text-align: center;
-  background-image: url("/images/tree_bark.png");
 }
 
 .functions-content-column {
   position: relative;
-  display: inline-block;
   width: 100%;
   z-index: 1;
+  border-bottom: 2px solid #05386B;
 }
 
 .functions-content-column--text {
@@ -670,7 +669,9 @@ table {
     letter-spacing: .03rem;
   }
   .functions-content-column {
-    max-width: 49%;
+    border: none;
+    max-width: 50%;
+    float: left;
   }
 }
 
@@ -709,7 +710,7 @@ table {
     margin-top: 2rem;
   }
   .functions-content-column {
-    max-width: 24.7%;
+    max-width: 25%;
   }
 }
 

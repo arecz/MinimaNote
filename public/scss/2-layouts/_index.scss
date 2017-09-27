@@ -172,14 +172,13 @@
 
 .functions {
   text-align: center;
-  background-image: url("/images/tree_bark.png");
   
   &-content {
     &-column {
       position: relative;
-      display: inline-block;
       width: 100%;
       z-index: 1;
+      border-bottom: 2px solid $royalblue;
       &--text {
         position: absolute;
         top: 30%;
@@ -311,7 +310,9 @@
     &-content {
       
       &-column {
-        max-width: 49%;
+        border: none;
+        max-width: 50%;
+        float: left;
       } 
     }
   }
@@ -361,7 +362,7 @@
     &-content {
 
       &-column {
-        max-width: 24.7%;
+        max-width: 25%;
       }
     }
   } 
