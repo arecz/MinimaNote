@@ -21,6 +21,10 @@
   100% {transform:translateY(-4px)};
 }
 
+@keyframes fade-in-text {
+  0% {opacity: 0;}
+  100%{opacity: 1;}
+}
 
 
 * {
@@ -167,18 +171,27 @@
 }
 
 .functions {
-  position:relative;
   text-align: center;
   background-image: url("/images/tree_bark.png");
   
   &-content {
-    position: relative;
     &-column {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      z-index: 1;
+      &--text {
+        position: absolute;
+        top: 30%;
+        padding: 0 1rem;
+        opacity: 0;
+        
+      }
       &:hover{
-        background-color: rgba(0, 0, 0, 0.4)
+        animation: mobile-btn-fade-in .5s ease-in forwards; 
       }
     }
-  } 
+  }
 }
 
 
@@ -294,19 +307,17 @@
   }
   
   .functions {
-    position: absolute;
-    width: 100%;
+    
     &-content {
+      
       &-column {
-        display: inline-block;
-        float: left;
-        min-width: 50%; 
+        max-width: 49%;
       } 
     }
   }
 } 
-
-
+ 
+ 
 @media #{$breakpoint-desktop}{
   .header {
     &-wrapper {
@@ -346,15 +357,11 @@
   }
   
   .functions {
+    
     &-content {
-      max-width: 100%;
-      position: relative;
+
       &-column {
-        display: inline-block;
-        float: left;
-        position: relative;
-        min-width: 25%; 
-        padding: 3rem 0;
+        max-width: 24.7%;
       }
     }
   } 
@@ -394,6 +401,18 @@ hr {
     display: block; 
     animation: slider-down .5s forwards;
     z-index: 1;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.fade-in {
+  animation: fade-in-text .5s ease-in forwards;
+}
+
+.background-fade-in {
+  background-color: $blue;
 }
 
 

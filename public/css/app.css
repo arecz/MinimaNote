@@ -390,6 +390,24 @@ table {
   }
 }
 
+@-webkit-keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fade-in-text {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -543,17 +561,27 @@ table {
 }
 
 .functions {
-  position: relative;
   text-align: center;
   background-image: url("/images/tree_bark.png");
 }
 
-.functions-content {
+.functions-content-column {
   position: relative;
+  display: inline-block;
+  width: 100%;
+  z-index: 1;
+}
+
+.functions-content-column--text {
+  position: absolute;
+  top: 30%;
+  padding: 0 1rem;
+  opacity: 0;
 }
 
 .functions-content-column:hover {
-  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-animation: mobile-btn-fade-in .5s ease-in forwards;
+          animation: mobile-btn-fade-in .5s ease-in forwards;
 }
 
 @media all and (min-width: 350px) {
@@ -641,14 +669,8 @@ table {
   .about-content--text {
     letter-spacing: .03rem;
   }
-  .functions {
-    position: absolute;
-    width: 100%;
-  }
   .functions-content-column {
-    display: inline-block;
-    float: left;
-    min-width: 50%;
+    max-width: 49%;
   }
 }
 
@@ -686,16 +708,8 @@ table {
     display: inline-block;
     margin-top: 2rem;
   }
-  .functions-content {
-    max-width: 100%;
-    position: relative;
-  }
   .functions-content-column {
-    display: inline-block;
-    float: left;
-    position: relative;
-    min-width: 25%;
-    padding: 3rem 0;
+    max-width: 24.7%;
   }
 }
 
@@ -728,4 +742,17 @@ hr {
   -webkit-animation: slider-down .5s forwards;
           animation: slider-down .5s forwards;
   z-index: 1;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.fade-in {
+  -webkit-animation: fade-in-text .5s ease-in forwards;
+          animation: fade-in-text .5s ease-in forwards;
+}
+
+.background-fade-in {
+  background-color: #03A9F4;
 }
