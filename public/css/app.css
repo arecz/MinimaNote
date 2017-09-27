@@ -286,6 +286,110 @@ table {
   border-spacing: 0;
 }
 
+@-webkit-keyframes slider-down {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 52px;
+  }
+}
+
+@keyframes slider-down {
+  0% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 52px;
+  }
+}
+
+@-webkit-keyframes mobile-btn-fade-in {
+  0% {
+    background-color: #B3E5FC;
+  }
+  100% {
+    background-color: #03A9F4;
+  }
+}
+
+@keyframes mobile-btn-fade-in {
+  0% {
+    background-color: #B3E5FC;
+  }
+  100% {
+    background-color: #03A9F4;
+  }
+}
+
+@-webkit-keyframes desktop-btn-fade-in {
+  0% {
+    background-color: #05386B;
+    color: white;
+  }
+  100% {
+    background-color: #B3E5FC;
+    color: black;
+  }
+}
+
+@keyframes desktop-btn-fade-in {
+  0% {
+    background-color: #05386B;
+    color: white;
+  }
+  100% {
+    background-color: #B3E5FC;
+    color: black;
+  }
+}
+
+@-webkit-keyframes moving-arrow {
+  0% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  75% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+}
+
+@keyframes moving-arrow {
+  0% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+  25% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  50% {
+    -webkit-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+  75% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  100% {
+    -webkit-transform: translateY(-4px);
+            transform: translateY(-4px);
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -297,10 +401,14 @@ table {
   background-color: #05386B;
   z-index: 10;
   padding: .5rem 0;
+  -webkit-transform: translateY(-52px);
+          transform: translateY(-52px);
+  -webkit-animation: slider-down .5s ease-in forwards;
+          animation: slider-down .5s ease-in forwards;
 }
 
 .navbar-brand {
-  color: #EFEFEF;
+  color: white;
   float: left;
   margin-left: 1rem;
 }
@@ -324,12 +432,47 @@ table {
   display: none;
 }
 
-.navbar-content-mobile--list {
+.navbar-content-desktop-button {
+  float: right;
+  padding: .5rem .8rem;
+  text-decoration: none;
+  color: white;
+}
+
+.navbar-content-desktop-button:hover {
+  -webkit-animation: desktop-btn-fade-in .5s ease-in forwards;
+          animation: desktop-btn-fade-in .5s ease-in forwards;
+}
+
+.mobile-list {
   display: none;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+  background-color: #B3E5FC;
+}
+
+.mobile-list--element {
+  padding: .8rem 0;
+  min-width: 32.4%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  color: #05386B;
+}
+
+.mobile-list--element:first-child {
+  border: none;
+}
+
+.mobile-list--element:hover {
+  -webkit-animation: mobile-btn-fade-in .8s ease-out forwards;
+          animation: mobile-btn-fade-in .8s ease-out forwards;
 }
 
 .header-wrapper {
-  background-image: url("/images/tree_bark.png");
+  background-image: url("/images/seigaiha.png");
   height: 100%;
   min-width: 100%;
   text-align: center;
@@ -465,15 +608,6 @@ table {
     margin-right: .5rem;
     float: right;
   }
-  .navbar-content-desktop-button {
-    float: right;
-    padding: .5rem .8rem;
-    text-decoration: none;
-    color: white;
-  }
-  .navbar-content-desktop-button:hover {
-    background-color: #03A9F4;
-  }
   .header-wrapper {
     text-align: center;
   }
@@ -572,6 +706,11 @@ table {
   border-radius: 100%;
 }
 
+.fa-arrow-down {
+  -webkit-animation: moving-arrow 2s linear 1s infinite;
+          animation: moving-arrow 2s linear 1s infinite;
+}
+
 .fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
   position: relative;
   font-size: 10rem;
@@ -582,4 +721,11 @@ table {
 
 hr {
   margin: 0;
+}
+
+.navbar-visible {
+  display: block;
+  -webkit-animation: slider-down .5s forwards;
+          animation: slider-down .5s forwards;
+  z-index: 1;
 }
