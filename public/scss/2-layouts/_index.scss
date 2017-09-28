@@ -31,11 +31,15 @@
   box-sizing: border-box;
 }
 
+body {
+  background-image: url("/images/seigaiha.png");
+}
+
 .navbar {
   position: fixed;
   width: 100%;
   background-color: $royalblue;
-  z-index: 10;
+  z-index: 10000;
   padding: .5rem 0;
   transform: translateY(-$animation-slide); 
   animation: slider-down .5s ease-in forwards;
@@ -179,10 +183,11 @@
       width: 100%;
       z-index: 1;
       border-bottom: 2px solid $royalblue;
+      padding: 3rem 0;
       &--text {
         position: absolute;
-        top: 30%;
-        padding: 0 1rem;
+        top: 0;
+        padding: 5rem 1rem;
         opacity: 0;
         
       }
@@ -193,7 +198,16 @@
   }
 }
 
-
+.footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  &-login {
+    padding: 2rem 0;
+    background-color: $royalblue;
+    color: white;
+  }
+}
 
 
 
@@ -381,11 +395,9 @@
 }
 
 .fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
-  position: relative;
   font-size: 10rem;
   color: $royalblue;
-  display: block;
-  padding: 3rem 0;
+  display: inline; 
 }
 
 hr {
@@ -406,6 +418,7 @@ hr {
 
 .invisible {
   visibility: hidden;
+  
 }
 
 .fade-in {

@@ -22,6 +22,7 @@ gulp.task("sass", function (){
     .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(output))
+    .pipe(browserSync.stream())
 });
 
 gulp.task("default", ["watch"], function (){  

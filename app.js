@@ -10,10 +10,14 @@ app.get("/", function(req, res){
   res.render("landing")
 }); 
 
+app.get("/login", function(req, res){
+  res.render("login")
+});
+
 app.get("/minimanote", function(req, res){
   res.render("index") 
 });
-
+ 
 
 
 /*app.listen(process.env.PORT, process.env.IP, function(){
