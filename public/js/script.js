@@ -51,7 +51,7 @@ function arrowScrollTop() {
 function arrowScrollBottom() {
   arrowBottom.addEventListener("click", function(){
     timer = setInterval(function(){scrollBy(0, 20)
-      if (window.scrollY > 1150) {
+      if (window.scrollY > 1100) {
         clearInterval(timer);
       }
     }, 1);
@@ -70,6 +70,7 @@ displayText(columnPlus, plus, plusText);
 displayText(columnCalculator, calculator, calculatorText);
 displayText(columnCalendar, calendar, calendarText);
 displayText(columnCheck, check, checkText);
+hamburgerToggle(); 
 
 
 
