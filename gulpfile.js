@@ -22,7 +22,6 @@ gulp.task("sass", function (){
     .pipe(sass(sassOptions).on("error", sass.logError))
     .pipe(autoprefixer())
     .pipe(gulp.dest(output))
-    .pipe(browserSync.stream())
 });
 
 gulp.task("default", ["watch"], function (){  
@@ -30,8 +29,11 @@ gulp.task("default", ["watch"], function (){
 
 
 gulp.task("watch", ["browser-sync"], function(){
+   
    watch ("./public/scss/**/*scss", function (){
-      gulp.start("sass")
+      gulp.start("sass");
+    
+    
    });
 });
 
@@ -40,6 +42,7 @@ gulp.task("browser-sync", ["nodemon"], function(){
     proxy: "http://localhost:5000",
     files: ["public/**/*.*", "views/*.*"],
     port: 7000,
+    reloadDelay: 150,
   });
 });
 
