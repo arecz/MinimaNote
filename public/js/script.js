@@ -34,7 +34,7 @@ function displayText(column, icon, text) {
     text.classList.remove("fade-in");
     column.classList.remove("background-fade-in");
   });
-};
+}
 
 
 
@@ -46,7 +46,7 @@ function arrowScrollTop() {
       }
     }, 1);
   });
-};
+}
 
 function arrowScrollBottom() {
   arrowBottom.addEventListener("click", function(){
@@ -56,13 +56,13 @@ function arrowScrollBottom() {
       }
     }, 1);
   });
-};
+}
 
 function hamburgerToggle() {
   hamburger.addEventListener("click", function(){
-      hamburgerList.classList.toggle("navbar-visible");
+      hamburgerList.classList.toggle("navbar-visible"); 
   });
-};
+} 
 
 arrowScrollTop();
 arrowScrollBottom();
