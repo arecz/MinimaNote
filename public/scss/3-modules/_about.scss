@@ -1,0 +1,62 @@
+.about {
+  background: url("/images/notepad--large-min.jpg") no-repeat center center;
+  background-size: cover;
+  border-bottom: $container-border;
+  color: $royalblue;
+  font-size: 1rem;
+  padding: 5rem 0 4rem 0;
+  &-wrapper{
+    margin: 0 auto;
+    text-align: center;
+  }
+  &-content{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 2rem; 
+    &--text{
+      margin: 0 auto;
+      max-width: 50vh;
+      display:block;
+      padding: .5rem;
+    }
+    &-footer{
+      margin-top: 6rem;
+    }
+  }
+}
+
+@media #{$breakpoint-smartphone}{
+  
+  .about {
+    padding: 10rem 0 4rem 0;
+    &-wrapper{
+      font-size: 1.2rem;
+    }
+    &-content{
+      &--text {
+        max-width: 60vh;
+      }
+    }
+  }
+}
+
+
+@media #{$breakpoint-tablet}{
+  
+  .about {
+    &-wrapper{
+      font-size: 1.4rem;
+    }
+    &-content{
+      &--text{
+        letter-spacing: .03rem;
+      }
+    }
+  }
+  
+}
+
+@media #{$breakpoint-desktop}{
+  
+  
+  
+}

@@ -1,0 +1,18 @@
+.navbar-visible {
+    display: block; 
+    animation: slider-down .5s forwards;
+    z-index: 1;
+}
+
+.invisible {
+  visibility: hidden;
+  
+}
+
+.fade-in {
+  animation: fade-in-text .5s ease-in forwards;
+}
+
+.background-fade-in {
+  background-color: $blue;
+}

@@ -1,0 +1,158 @@
+.header {
+  &-wrapper {
+    background-image: url("/images/seigaiha.png");
+
+    height: 100%;
+    min-width: 100%;
+    
+    text-align: center;
+    
+  }
+  &-content {
+    max-width: 30vh;
+    transform: translate(0, 20vh);
+    display: inline-block;
+    &--title{
+      font-size: 1.8rem;
+      color: $royalblue;
+      font-weight: $bold;
+    }
+  }
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    background-color: $lightblue;
+    padding: 5vh 1vh;
+    color: $royalblue;
+    text-align: center;
+    border-bottom: $container-border;
+    width: 100%;
+    
+
+    &--text {
+      font-weight: $bold;
+      font-size: 1.2rem;
+      display: inline-block;
+    }
+    
+    &--logo {
+      margin-top: 2rem;
+    }
+    
+  }
+}
+
+@media #{$breakpoint-smartphone}{
+  
+  .header {
+    &-wrapper {
+      text-align: center;
+
+    }
+    &-content {
+      max-width: 30vh;
+      transform: translate(0, 20vh);
+      display: inline-block;
+      &--title{
+        font-size: 1.8rem;
+        color: $royalblue;
+        font-weight: $bold;
+      }
+    }
+    &-footer {
+      background-color: $lightblue;
+      padding: 5vh 2vh 7vh 2vh;
+      color: $royalblue;
+      text-align: center;
+
+      &--text {
+        font-weight: $bold;
+        font-size: 1.2rem;
+        max-width: 380px;
+        display: block;
+        margin: 0 auto;
+      }
+
+    }
+  }
+  
+}
+
+@media #{$breakpoint-tablet}{
+ 
+  .header {
+    &-wrapper {
+      text-align: center;
+
+    }
+    &-content {
+      max-width: 30vh;
+      transform: translate(0, 20vh);
+      display: inline-block;
+      &--title{
+        font-size: 1.8rem;
+        color: $royalblue;
+        font-weight: $bold;
+      }
+    }
+    &-footer {
+      background-color: $lightblue;
+      padding: 5vh 2vh 7vh 2vh;
+      color: $royalblue;
+      text-align: center;
+
+      &--text {
+        font-weight: $bold;
+        font-size: 1.2rem;
+        max-width: 380px;
+        display: block;
+        margin: 0 auto;
+      }
+    }
+  }
+  
+}
+
+@media #{$breakpoint-desktop}{
+    
+  .header {
+    &-wrapper {
+      text-align: center;
+
+    }
+    &-content {
+      max-width: 40vh;
+      transform: translate(0, 20vh);
+      display: inline-block;
+      &--title{
+        font-size: 2.8rem;
+        color: $royalblue;
+        font-weight: $bold;
+      }
+    }
+    &-footer {
+      background-color: $lightblue;
+      padding: 5vh 2vh 5vh 2vh;
+      color: $royalblue;
+      text-align: center;
+      box-sizing: border-box;
+
+      &--text {
+        font-weight: $bold;
+        font-size: 1.6rem;
+        max-width: 420px;
+        display: block;
+        margin: 0 auto;
+        
+      }
+      &--logo {
+        display: inline-block;
+        margin-top: 2rem; 
+      }
+    }
+  }
+  
+}
+
+
+

@@ -408,6 +408,44 @@ table {
   }
 }
 
+.fa-arrow-down:before {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 3px solid #05386B;
+  border-radius: 100%;
+}
+
+.fa-arrow-down {
+  -webkit-animation: moving-arrow 2s linear 1s infinite;
+          animation: moving-arrow 2s linear 1s infinite;
+}
+
+.fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
+  font-size: 10rem;
+  color: #05386B;
+  display: inline;
+}
+
+.navbar-visible {
+  display: block;
+  -webkit-animation: slider-down .5s forwards;
+          animation: slider-down .5s forwards;
+  z-index: 1;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.fade-in {
+  -webkit-animation: fade-in-text .5s ease-in forwards;
+          animation: fade-in-text .5s ease-in forwards;
+}
+
+.background-fade-in {
+  background-color: #03A9F4;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -415,6 +453,10 @@ table {
 
 body {
   background-image: url("/images/seigaiha.png");
+}
+
+hr {
+  margin: 0;
 }
 
 .navbar {
@@ -464,6 +506,21 @@ body {
 .navbar-content-desktop-button:hover {
   -webkit-animation: desktop-btn-fade-in .5s ease-in forwards;
           animation: desktop-btn-fade-in .5s ease-in forwards;
+}
+
+@media all and (min-width: 700px) {
+  .navbar-content {
+    display: block;
+    float: right;
+  }
+  .navbar-content-mobile {
+    display: none;
+  }
+  .navbar-content-desktop {
+    display: block;
+    margin-right: .5rem;
+    float: right;
+  }
 }
 
 .mobile-list {
@@ -534,72 +591,6 @@ body {
   margin-top: 2rem;
 }
 
-.about {
-  background: url("/images/notepad--large-min.jpg") no-repeat center center;
-  background-size: cover;
-  border-bottom: 5px solid #05386B;
-  color: #05386B;
-  font-size: 1rem;
-  padding: 5rem 0 4rem 0;
-}
-
-.about-wrapper {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.about-content {
-  background-color: rgba(255, 255, 255, 0.7);
-  padding: 2rem;
-}
-
-.about-content--text {
-  margin: 0 auto;
-  max-width: 50vh;
-  display: block;
-  padding: .5rem;
-}
-
-.about-content-footer {
-  margin-top: 6rem;
-}
-
-.functions {
-  text-align: center;
-}
-
-.functions-content-column {
-  position: relative;
-  width: 100%;
-  z-index: 1;
-  border-bottom: 2px solid #05386B;
-  padding: 3rem 0;
-}
-
-.functions-content-column--text {
-  position: absolute;
-  top: 0;
-  padding: 5rem 1rem;
-  opacity: 0;
-}
-
-.functions-content-column:hover {
-  -webkit-animation: mobile-btn-fade-in .5s ease-in forwards;
-          animation: mobile-btn-fade-in .5s ease-in forwards;
-}
-
-.footer {
-  clear: both;
-  width: 100%;
-  text-align: center;
-}
-
-.footer-login {
-  padding: 2rem 0;
-  background-color: #05386B;
-  color: white;
-}
-
 @media all and (min-width: 350px) {
   .header-wrapper {
     text-align: center;
@@ -628,30 +619,9 @@ body {
     display: block;
     margin: 0 auto;
   }
-  .about {
-    padding: 10rem 0 4rem 0;
-  }
-  .about-wrapper {
-    font-size: 1.2rem;
-  }
-  .about-content--text {
-    max-width: 60vh;
-  }
 }
 
 @media all and (min-width: 700px) {
-  .navbar-content {
-    display: block;
-    float: right;
-  }
-  .navbar-content-mobile {
-    display: none;
-  }
-  .navbar-content-desktop {
-    display: block;
-    margin-right: .5rem;
-    float: right;
-  }
   .header-wrapper {
     text-align: center;
   }
@@ -678,17 +648,6 @@ body {
     max-width: 380px;
     display: block;
     margin: 0 auto;
-  }
-  .about-wrapper {
-    font-size: 1.4rem;
-  }
-  .about-content--text {
-    letter-spacing: .03rem;
-  }
-  .functions-content-column {
-    border: none;
-    max-width: 50%;
-    float: left;
   }
 }
 
@@ -726,49 +685,105 @@ body {
     display: inline-block;
     margin-top: 2rem;
   }
+}
+
+.about {
+  background: url("/images/notepad--large-min.jpg") no-repeat center center;
+  background-size: cover;
+  border-bottom: 5px solid #05386B;
+  color: #05386B;
+  font-size: 1rem;
+  padding: 5rem 0 4rem 0;
+}
+
+.about-wrapper {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 2rem;
+}
+
+.about-content--text {
+  margin: 0 auto;
+  max-width: 50vh;
+  display: block;
+  padding: .5rem;
+}
+
+.about-content-footer {
+  margin-top: 6rem;
+}
+
+@media all and (min-width: 350px) {
+  .about {
+    padding: 10rem 0 4rem 0;
+  }
+  .about-wrapper {
+    font-size: 1.2rem;
+  }
+  .about-content--text {
+    max-width: 60vh;
+  }
+}
+
+@media all and (min-width: 700px) {
+  .about-wrapper {
+    font-size: 1.4rem;
+  }
+  .about-content--text {
+    letter-spacing: .03rem;
+  }
+}
+
+.functions {
+  text-align: center;
+}
+
+.functions-content-column {
+  position: relative;
+  width: 100%;
+  z-index: 1;
+  border-bottom: 2px solid #05386B;
+  padding: 3rem 0;
+}
+
+.functions-content-column--text {
+  position: absolute;
+  top: 0;
+  padding: 5rem 1rem;
+  opacity: 0;
+}
+
+.functions-content-column:hover {
+  -webkit-animation: mobile-btn-fade-in .5s ease-in forwards;
+          animation: mobile-btn-fade-in .5s ease-in forwards;
+}
+
+@media all and (min-width: 700px) {
+  .functions-content-column {
+    border: none;
+    max-width: 50%;
+    float: left;
+  }
+}
+
+@media all and (min-width: 1280px) {
   .functions-content-column {
     max-width: 25%;
   }
 }
 
-.fa-arrow-down:before {
-  font-size: 2rem;
-  padding: 1rem;
-  border: 3px solid #05386B;
-  border-radius: 100%;
+.footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
 }
 
-.fa-arrow-down {
-  -webkit-animation: moving-arrow 2s linear 1s infinite;
-          animation: moving-arrow 2s linear 1s infinite;
-}
-
-.fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
-  font-size: 10rem;
-  color: #05386B;
-  display: inline;
-}
-
-hr {
-  margin: 0;
-}
-
-.navbar-visible {
-  display: block;
-  -webkit-animation: slider-down .5s forwards;
-          animation: slider-down .5s forwards;
-  z-index: 1;
-}
-
-.invisible {
-  visibility: hidden;
-}
-
-.fade-in {
-  -webkit-animation: fade-in-text .5s ease-in forwards;
-          animation: fade-in-text .5s ease-in forwards;
-}
-
-.background-fade-in {
-  background-color: #03A9F4;
+.footer-login {
+  padding: 2rem 0;
+  background-color: #05386B;
+  color: white;
 }

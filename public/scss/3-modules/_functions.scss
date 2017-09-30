@@ -1,0 +1,59 @@
+.functions {
+  text-align: center;
+  
+  &-content {
+    &-column {
+      position: relative;
+      width: 100%;
+      z-index: 1;
+      border-bottom: 2px solid $royalblue;
+      padding: 3rem 0;
+      &--text {
+        position: absolute;
+        top: 0;
+        padding: 5rem 1rem;
+        opacity: 0;
+        
+      }
+      &:hover{
+        animation: mobile-btn-fade-in .5s ease-in forwards; 
+      }
+    }
+  }
+}
+
+
+@media #{$breakpoint-smartphone}{
+  
+  
+  
+}
+@media #{$breakpoint-tablet}{
+  
+  .functions {
+    
+    &-content {
+      
+      &-column {
+        border: none;
+        max-width: 50%; 
+        float: left;
+      } 
+    }
+  } 
+}
+
+
+@media #{$breakpoint-desktop}{
+  
+  .functions {
+    
+    &-content {
+
+      &-column {
+        max-width: 25%;
+      }
+    }
+  } 
+}
+  

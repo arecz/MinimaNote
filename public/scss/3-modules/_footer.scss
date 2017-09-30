@@ -1,0 +1,27 @@
+.footer {
+  clear: both;
+  width: 100%;
+  text-align: center;
+  &-login {
+    padding: 2rem 0;
+    background-color: $royalblue;
+    color: white;
+  }
+}
+
+
+@media #{$breakpoint-smartphone}{
+  
+  
+  
+}
+@media #{$breakpoint-tablet}{
+  
+  
+  
+}
+@media #{$breakpoint-desktop}{
+  
+  
+  
+}

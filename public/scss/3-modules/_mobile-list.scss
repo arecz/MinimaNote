@@ -1,0 +1,22 @@
+.mobile-list{
+  display: none;
+  position:fixed;
+  width: 100%;
+  text-align: center;
+  list-style-type: none;
+  background-color: $lightblue;
+  &--element{ 
+    padding: .8rem 0;
+    min-width: 32.4%;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    color: $royalblue;
+    &:first-child {
+      border: none;
+    }
+    &:hover {
+      animation: mobile-btn-fade-in .8s ease-out forwards;
+    }
+  }
+}

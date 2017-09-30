@@ -1,0 +1,16 @@
+.fa-arrow-down:before {
+  font-size: 2rem;
+  padding: 1rem;
+  border: 3px solid $royalblue;
+  border-radius: 100%;
+}
+
+.fa-arrow-down {
+  animation: moving-arrow 2s linear 1s infinite;
+}
+
+.fa-plus-circle:before, .fa-calculator:before, .fa-calendar:before, .fa-check:before {
+  font-size: 10rem;
+  color: $royalblue;
+  display: inline; 
+}
